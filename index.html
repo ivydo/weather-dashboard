@@ -15,13 +15,13 @@
 </header>
 
 <body>
-    <div class="main-container">
+    <div class="repos-container">
         <div class="city-search">
             <form class="city-form">
                 <h2>Search for a City:</h2>
                 <div class="form-content">
-                    <input type="text">
-                    <button type="submit">Search</button>
+                    <input type="text" id="search-input">
+                    <button onclick="getCityDetails(event)" type="submit" id="search-btn">Search</button>
                 </div>
             </form>
             <div class="search-history">
@@ -38,6 +38,13 @@
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./assets/javascript/homepage.js"></script>
 </body>
 
 </html>
