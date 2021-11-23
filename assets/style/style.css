@@ -1,0 +1,41 @@
+.nav-container {
+  background-color: blueviolet;
+  display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.main-container {
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.city-search {
+  background-color: aqua;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 20%;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-weather {
+  background-color: green;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80%;
+
+
+}
