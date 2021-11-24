@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
+/* universal */
 * {
   margin: 0;
   padding: 0;
@@ -9,12 +9,17 @@
 body {
   width: 100vw;
   min-height: 100vh;
-  background: rgb(12,16,85);
-  background: linear-gradient(180deg, rgba(12,16,85,1) 43%, rgba(76,90,177,1) 87%, rgba(125,128,215,1) 100%);
+  background: rgb(12, 16, 85);
+  background: linear-gradient(
+    180deg,
+    rgba(12, 16, 85, 1) 43%,
+    rgba(76, 90, 177, 1) 87%,
+    rgba(125, 128, 215, 1) 100%
+  );
 }
-
+/* nav */
 .nav-container {
-    display: flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
@@ -22,12 +27,12 @@ body {
   font-size: 30px;
   margin-bottom: 10px;
 }
-
+/* repo-container */
 .repos-container {
   display: flex;
   flex-direction: row;
 }
-
+/* search bar */
 .city-search {
   background: rgba(255, 255, 255, 0.4);
   margin-right: 15px;
@@ -40,13 +45,17 @@ body {
   min-width: 20%;
 }
 
+.search-btn {
+  background-color: rgb(38, 11, 65);
+}
+
 .form-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
+/*  display city data*/
 .display-weather {
   background: rgba(255, 255, 255, 0.4);
   padding: 15px;
@@ -56,8 +65,4 @@ body {
   flex-direction: column;
   align-items: center;
   min-width: 80%;
-}
-
-.search-btn {
-  background-color: rgb(38, 11, 65);
 }

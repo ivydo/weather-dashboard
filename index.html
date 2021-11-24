@@ -17,24 +17,24 @@
 <body>
     <div class="repos-container">
         <div class="city-search">
-            <form class="city-form">
+            <form class="forecast-form" id="forecast-form">
                 <h2 class="city-header">Search for a City:</h2>
                 <div class="form-content">
                     <input type="text" id="search-input">
-                    <button onclick="getCityDetails(event)" type="submit" id="search-btn" class="search-btn">Search</button>
+                    <button onclick="getCityDetails(event)" type="submit" id="search-btn"
+                        class="search-btn">Search</button>
                 </div>
             </form>
             <div class="search-history">
                 <p>Search History Data</p>
             </div>
         </div>
-        <div class="display-weather">
-            <div class="col-1" id="col-1">
-                <h2 class="weather-header">Displays City Data</h2>
+        <div class="display-weather" id="display-weather">
+            <div class="main-forecast" id="main-forecast">
+                <!-- <h2 class="cityname-header" id="cityname-header"></h2> -->
                 <!-- city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index -->
-                
             </div>
-            <div class="col-2" id="col-2">
+            <div class="5-day-forecast" id="5-day-forecast">
                 <p>5-day forecast</p>
                 <div class="5-forecast"></div>
             </div>
