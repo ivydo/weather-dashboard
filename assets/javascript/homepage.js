@@ -2,7 +2,7 @@
 const apiKey = "d5a31c547245680a0f00b2ffe15f45df";
 var searchButton = document.querySelector("#search-btn");
 var repoContainerEl = document.querySelector("#repos-container");
-var displayCityData = document.querySelector("#col-1")
+var cityDataContainer = document.querySelector("#col-1")
 
 var searchArr = [];
 
@@ -24,3 +24,5 @@ async function getCityDetails(event) {
       //  clear search input
   searchInput.val = "";
 };
+
+
