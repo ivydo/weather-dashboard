@@ -36,6 +36,7 @@ body {
 .city-search {
   background: rgba(255, 255, 255, 0.4);
   margin-right: 15px;
+  margin-left: 30px;
   padding: 15px;
   display: flex;
   flex-wrap: wrap;
@@ -75,12 +76,15 @@ input[type="text"]{
 .display-weather {
   background: rgba(255, 255, 255, 0.4);
   padding: 15px;
-  margin: 0 15px;
+  margin-left: 15px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  min-width: 80%;
+  min-width: 70%;
   line-height: 2.0;
 }
 
+.five-day-forecast {
+background-color: #fff;
+}
 
