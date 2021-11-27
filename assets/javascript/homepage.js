@@ -3,8 +3,13 @@ const apiKey = "d5a31c547245680a0f00b2ffe15f45df";
 var searchButton = document.querySelector("#search-btn");
 var repoContainerEl = document.querySelector("#repos-container");
 
+// empty array to store repo
 var searchArr = [];
 var searchArrTwo = [];
+
+// empty array for search history
+cityArr = [];
+
 
 // search by city
 async function getCityDetails(event) {
@@ -17,13 +22,17 @@ async function getCityDetails(event) {
     );
     console.log("citywweatherres", cityWeatherRes);
     searchArr = cityWeatherRes.data;
+    cityArr.push(cityWeatherRes.data);
   } catch (err) {
     // handle error
     console.log(err);
   }
+
   //  clear search input
   $("#forecast-form")[0].reset();
   getMoreDetails();
+  // save into local
+  saveText();
 }
 
 // second api to get uv index, current date
@@ -48,7 +57,8 @@ function displayForecast() {
 
   var weatherIconElement = document.createElement("img");
   var cityNameElement = document.createElement("h1");
-  var dateElement = new Date().toISOString().slice(0, 10);document.createElement("h2");
+  var dateElement = new Date().toISOString().slice(0, 10);
+  document.createElement("h2");
   var tempElement = document.createElement("p");
   var humidElement = document.createElement("p");
   var windElement = document.createElement("p");
@@ -70,4 +80,16 @@ function displayForecast() {
     windElement,
     uvElement
   );
+}
+
+// saves search history cities in local storage
+
+function saveText() {
+  sessionStorage.setItem("texts", JSON.stringify(cityArr));
+}
+
+function loadHistory() {
+  searchArr.forEach(function (index) {
+    
+  });
 }
