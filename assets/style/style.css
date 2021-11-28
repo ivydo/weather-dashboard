@@ -8,13 +8,6 @@
 body {
   width: 100vw;
   min-height: 100vh;
-  background: rgb(12, 16, 85);
-  background: linear-gradient(
-    180deg,
-    rgba(12, 16, 85, 1) 43%,
-    rgba(76, 90, 177, 1) 87%,
-    rgba(125, 128, 215, 1) 100%
-  );
 }
 /* nav */
 .nav-container {
@@ -22,10 +15,13 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
-  color: #fff;
-  font-size: 30px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(46, 45, 45);
+  font-size: 25px;
   margin-bottom: 10px;
 }
+
+
 /* repo-container */
 .repos-container {
   display: flex;
@@ -83,6 +79,4 @@ input[type="text"] {
   line-height: 2;
 }
 
-.five-day-forecast {
-  background-color: #fff;
-}
+

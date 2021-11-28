@@ -1,7 +1,6 @@
 // setting global var
 const apiKey = "d5a31c547245680a0f00b2ffe15f45df";
 var searchButton = document.querySelector("#search-btn");
-var repoContainerEl = document.querySelector("#repos-container");
 
 // empty array to store repo
 var searchArr = [];
@@ -9,7 +8,6 @@ var searchArrTwo = [];
 
 // empty array for search history
 cityArr = [];
-
 
 // search by city
 async function getCityDetails(event) {
@@ -65,8 +63,7 @@ function displayForecast() {
   var uvElement = document.createElement("p");
 
   cityNameElement.innerText = `${searchArr.name}`;
-  tempElement.innerText =
-    "Temperature: " + `${searchArr.main.temp}` + "° Farenheit";
+  tempElement.innerText = "Temperature: " + `${searchArr.main.temp}` + "°F";
   humidElement.innerText = "Humidity: " + `${searchArr.main.humidity}` + "%";
   windElement.innerText =
     "Wind Speed: " + `${searchArr.wind.speed}` + " miles/hour";
@@ -85,11 +82,23 @@ function displayForecast() {
 // saves search history cities in local storage
 
 function saveText() {
-  sessionStorage.setItem("texts", JSON.stringify(cityArr));
+  sessionStorage.setItem("search-histories", JSON.stringify(cityArr));
 }
 
 function loadHistory() {
-  searchArr.forEach(function (index) {
-    
-  });
+  cityArr.forEach(function (index) { });
+  var savedTexts = sessionStorage.getItem('texts');
+if(!savedTexts) {
+        return false;
+    }
+
+    savedTexts = JSON.parse(savedTexts);
+    console.log(savedTexts, "this is savedTexts");
+    textArr = savedTexts;
+    loadStorageTexts();
 }
+
+
+
+
+// display five day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
